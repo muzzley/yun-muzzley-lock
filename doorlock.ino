@@ -99,7 +99,7 @@ void loop() {
         }
 
         response_msg = component + "|" + property + "|" + locked;
-        Ciao.writeResponse("muzzley", response_msg);
+        Ciao.write("muzzley", response_msg);
 
         #ifdef DEBUG
           Serial.print("\nUpdate Message sent: " + response_msg);
@@ -114,7 +114,7 @@ void loop() {
     digitalWrite(relay_pin, LOW);
     locked = false;
     String update_msg =  "yunlock1|locked|true";
-    Ciao.writeResponse("muzzley", update_msg);
+    Ciao.write("muzzley", update_msg);
   }
 
   delay(100);
