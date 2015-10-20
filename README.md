@@ -5,22 +5,36 @@ This repo contains the code for the Arduino Yun - Muzzley Lock project.
 To take part of the Arduino Yun IoT capabilities, this project uses the new Arduino Ciao platform and the Muzzley Cloud to interact wih the "outside world"
 
 
+
+# What is Muzzley?
+
+Muzzley is an app that gathers all of your connected devices and puts them to work together in an intuitive way. 
+
+The app allows connected devices of different brands to communicate with and respond to each other. This not only brings more value to the majority of consumers who are still figuring out the value of the smart home, but also to the brands we integrate with. 
+
+Some of the brands that work with us: Philips Hue Lamp, Nest Learning Thermostat®, Nest Protect: Smoke + Carbon Monoxide™, Rachio Smart Sprinkler and Koubachi Wi-Fi Plant Sensor. 
+
+Alongside this, we're working on a machine learning algorithm that will make these devices more intuitive and customized than ever. Because we believe that people have better things to do than to automate their devices, our goal is to create an ecosystem that adapts to the user's patterns and behaviors. 
+
+Muzzley is available in iOS, Android and Windows Phone. 
+
+More info about Muzzley: [https://www.muzzley.com](https://www.muzzley.com)
+
+f: /muzzleypower 
+t: @muzzleypower 
+
+
+
 # What is Arduino Ciao?
 
-Ciao Connectors makes the Arduino boards able to communicate with the "outside world" very easily.
+
+Arduino Ciao is a easy-to-use and powerful technology that enables Arduino sketches to communicate intuitively with the "outside World". It aims to simplify interaction between microcontroller and Linino OS  allowing a variety of connections with most common protocols, third-party services and social networks.
+
+Ciao has been designed and developed to be modular and easily configurable. Its goal is to support several connectors capable of interacting with system resources (filesystem, console, memory) and to communicate with the most common and useful protocols (XMPP, HTTP, WebSocket, COAP, etc..) and applications (Jabber, WeChat, Twitter, Facebook, etc.).
 
 It only needs the Ciao Library running on the MCU (microcontroller) side to interact with your Arduino sketch code, and the Ciao Core running over the Linino OS to enable the communication with several modules called connectors.
 
 More info about Arduino Ciao: [http://labs.arduino.org/ciao](http://labs.arduino.org/ciao)
-
-
-# What is Muzzley?
-
-Muzzley is an app for connected devices.
-
-It ables the user to intearact with their connected devices using his smartphone or tablet, using wifi or 3G/LTE conectivity.
-
-More info about Muzzley: [https://www.muzzley.com](https://www.muzzley.com)
 
 
 
