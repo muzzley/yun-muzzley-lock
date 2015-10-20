@@ -31,19 +31,16 @@ More info about Muzzley: [https://www.muzzley.com](https://www.muzzley.com)
 * [Linino OS](http://www.linino.org) running on a Arduino / Linino compatible board. More info about the Linino OS installation on a Arduino Yun board can be found [here](http://labs.arduino.org/How+to+upgrade+the+Linino+distribution+for+Arduino+Yun)
 * Install Arduino Ciao Core following the instructions [here](http://labs.arduino.org/Ciao+setup)
 * Install the Arduino [Ciao Library](https://github.com/arduino-org/CiaoMCU) on the [Arduino IDE](https://www.arduino.cc/en/Main/Software) / [Arduino Studio](http://labs.arduino.org/tiki-index.php?page=Arduino+Studio)
+* Install the following python module dependencies on the Linino OS:
+ * distribute
+ * python-openssl
+ * pip
+ * requests
+
 
 ##Install the Muzzley connector
 
-1) Copy the Muzzley Connector folder to the Arduino Ciao **connectors** folder
-
-2) Copy the Muzzley Connector configuration file to the Arduino Ciao **conf** folder
-
-3) Install the following module dependencies on the Linino OS:
-
-* distribute
-* python-openssl
-* pip
-* requests
+1) Download the project from the following [url](https://github.com/muzzley/arduino-ciao-muzzley-connector) and follow the included set up instructions.
 
 
 ##Create your Muzzley App
