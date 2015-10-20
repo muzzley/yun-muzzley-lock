@@ -7,15 +7,20 @@ bool unlocking = false;
 int timer = 0;
 int max_time = 3000;
 
+String lock_component = String("yunlock1");
+String lock_property = String("unlock");
+
 void setup() {
-  pinMode(13, OUTPUT);
+  pinMode(relay_pin, OUTPUT);
   Ciao.begin(115000);
   #ifdef DEBUG
     Serial.begin(57600);
     while(!Serial){}
     Serial.println("Started Ciao!");
   #endif
-  digitalWrite(13, LOW);
+  digitalWrite(relay_pin, HIGH);
+  delay(3000);
+  digitalWrite(relay_pin, LOW);
 }
 
 void loop() {
@@ -40,7 +45,7 @@ void loop() {
     String _cid = data.get(2);
 
     #ifdef DEBUG
-      Serial.print("\nReceived a new message:");
+      Serial.print("\n\n\nReceived a new message:");
       Serial.print("\nMessage Id: ");  // Ciao message ID
       Serial.print(id);
       Serial.print("\nMessage: ");     // Message (io/Component/Property/Value)
@@ -73,12 +78,20 @@ void loop() {
     String response_msg;
 
     if (io.equals("r")) {
-      if (component == "yunlock1" && property == "locked") {
-        response_msg = component + "|" + property + "|" + locked;
-        #ifdef DEBUG
-          Serial.print("\nLock is locked: " + locked);
-        #endif
-
+      if (component == lock_component && property == lock_property) {
+        
+        if(locked){
+          #ifdef DEBUG
+            Serial.print("\nLock is locked!");
+          #endif
+          response_msg = lock_component + "|" + lock_property + "|" + "False";
+        }else{
+          #ifdef DEBUG
+            Serial.print("\nLock is unlocked!");
+          #endif
+          response_msg = lock_component + "|" + lock_property + "|" + "True";
+        }
+        
         Ciao.writeResponse("muzzley", id, response_msg);
         #ifdef DEBUG
           Serial.print("\nResponse: " + response_msg);
@@ -87,18 +100,27 @@ void loop() {
     }
 
     if(io.equals("w")){
-      if (component == "yunlock1" && property == "locked"){
+      if (component == lock_component && property == lock_property){
         if (value == "False") {
-          locked = false;
-          unlocking = false;
-          digitalWrite(relay_pin, LOW);
-        } else if (value == "True" && unlocking == false){
+          timer=0;
           locked = true;
+          unlocking = false;
+          response_msg = lock_component + "|" + lock_property + "|" + "False";
+          digitalWrite(relay_pin, LOW);
+          #ifdef DEBUG
+            Serial.print("\nLocked!");
+          #endif
+        } else if (value == "True" && unlocking == false){
+          timer=0;
+          locked = false;
           unlocking = true;
+          response_msg = lock_component + "|" + lock_property + "|" + "True";
           digitalWrite(relay_pin, HIGH);
+          #ifdef DEBUG
+            Serial.print("\nUnlocked!");
+          #endif
         }
-
-        response_msg = component + "|" + property + "|" + locked;
+        
         Ciao.write("muzzley", response_msg);
 
         #ifdef DEBUG
@@ -110,11 +132,13 @@ void loop() {
 
   // Prevent unlocking for a long time
   if (timer >= max_time) {
+    timer=0;
+    locked = true;
     unlocking = false;
     digitalWrite(relay_pin, LOW);
-    locked = false;
-    String update_msg =  "yunlock1|locked|true";
+    String update_msg =  lock_component + "|" + lock_property + "|" + "False";
     Ciao.write("muzzley", update_msg);
+   
   }
 
   delay(100);
