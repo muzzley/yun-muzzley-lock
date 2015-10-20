@@ -20,7 +20,8 @@ Muzzley is available in iOS, Android and Windows Phone.
 
 More info about Muzzley: [https://www.muzzley.com](https://www.muzzley.com)
 
-f: /muzzleypower 
+f: /muzzleypower
+
 t: @muzzleypower 
 
 
