@@ -4,7 +4,7 @@ This repo contains the code for the Arduino YÚN - Muzzley Lock project.
 
 To take part of the Arduino YÚN IoT capabilities, this project uses the new Arduino Ciao platform and the Muzzley Cloud to interact wih the "outside world"
 
-![YUN_Lock_Proj](./images/YUN_Lock_Proj.png)
+![YUN_Lock_Proj](./images/YUN-Lock-Proj.png)
 
 # What is Muzzley?
 
