@@ -53,9 +53,9 @@ The image below shows the wiring needed to coonect the lock to the Arduino board
 * Install the following python module dependencies on the Linino OS:
  * distribute
  * python-openssl
- * pip
+ * paho-mqtt
+ * urllib3
  * requests
-
 
 ##Install the Muzzley connector
 
