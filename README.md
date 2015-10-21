@@ -2,9 +2,8 @@
 
 This repo contains the code for the Arduino YÚN - Muzzley Lock project.
 
-To take part of the Arduino YÚN IoT capabilities, this project uses the new Arduino Ciao platform and the Muzzley Cloud to interact wih the "outside world"
+This project uses the Arduino YÚN board and a simple circuit with a solid state relay to act over a electronic lock.
 
-![YUN_Lock_Proj](./images/YUN-Lock-Proj.png)
 
 # What is Muzzley?
 
@@ -25,7 +24,6 @@ f: /muzzleypower
 t: @muzzleypower 
 
 
-
 # What is Arduino Ciao?
 
 
@@ -37,6 +35,12 @@ It only needs the Ciao Library running on the MCU (microcontroller) side to inte
 
 More info about Arduino Ciao: [http://labs.arduino.org/ciao](http://labs.arduino.org/ciao)
 
+
+# How to wire the lock to the Arduino?
+
+The image below shows the wiring needed to coonect the lock to the Arduino board:
+
+![YUN_Lock_Proj](./images/YUN-Lock-Proj.png)
 
 
 # How do I get set up?
