@@ -1,27 +1,26 @@
 # Arduino YÚN Muzzley Lock #
 
-This repo contains the code for the Arduino YÚN - Muzzley Lock project.
+For one or other reason, all of us have wished to remotely open our door to someone we trust and there was no way to do it. Or committed the most common mistake of leaving the keyring behind when closing our door…
 
-This project uses the Arduino YÚN board and a simple circuit with a solid state relay to act over a electronic lock.
+![YUN_Board](./images/YUN-Board.png)
 
+If you wish to hack your electric door lock and be able to unlock it through your smartphone, this is the time to embrace a very simple project where you will only need a solid-state relay to act on the lock, an Arduino YÚN to provide the WiFi connection, some simple wiring and Muzzley app!
 
-# What is Muzzley?
+Muzzley is a cloud based app that gathers all of your connected devices and puts them to work together in an intuitive way.
+The app allows connected devices of different brands to communicate with and respond to each other. This not only brings more value to the majority of consumers who are still figuring out the value of the smart home, but also to the brands we integrate with.
 
-Muzzley is an app that gathers all of your connected devices and puts them to work together in an intuitive way. 
+![YUN_Muzzley_Context](./images/YUN-Muzzley-Context.png)
 
-The app allows connected devices of different brands to communicate with and respond to each other. This not only brings more value to the majority of consumers who are still figuring out the value of the smart home, but also to the brands we integrate with. 
+Some of the brands that work with us: Philips Hue Lamp, Nest Learning Thermostat®, Nest Protect: Smoke + Carbon Monoxide™, Rachio Smart Sprinkler and Koubachi Wi-Fi Plant Sensor.
 
-Some of the brands that work with us: Philips Hue Lamp, Nest Learning Thermostat®, Nest Protect: Smoke + Carbon Monoxide™, Rachio Smart Sprinkler and Koubachi Wi-Fi Plant Sensor. 
+Alongside this, we're working on a machine learning algorithm that will make these devices more intuitive and customized than ever. Because we believe that people have better things to do than to automate their devices, our goal is to create an ecosystem that adapts to the user's patterns and behaviors.
 
-Alongside this, we're working on a machine learning algorithm that will make these devices more intuitive and customized than ever. Because we believe that people have better things to do than to automate their devices, our goal is to create an ecosystem that adapts to the user's patterns and behaviors. 
-
-Muzzley is available in iOS, Android and Windows Phone. 
-
-More info about Muzzley: [https://www.muzzley.com](https://www.muzzley.com)
+Muzzley is available in iOS, Android and Windows Phone.
+More info about Muzzley: https://www.muzzley.com
 
 f: /muzzleypower
 
-t: @muzzleypower 
+t: @muzzleypower
 
 
 # What is Arduino Ciao?
@@ -38,7 +37,7 @@ More info about Arduino Ciao: [http://labs.arduino.org/ciao](http://labs.arduino
 
 # How to wire the lock to the Arduino?
 
-The image below shows the wiring needed to coonect the lock to the Arduino board:
+The image below shows the wiring needed to connect the lock to the Arduino board:
 
 ![YUN_Lock_Proj](./images/YUN-Lock-Proj.png)
 
