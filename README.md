@@ -106,7 +106,7 @@ The image below shows the wiring needed to connect the lock to the Arduino board
 
 1) Connect the Arduino USB port to the computer, if not already connected, and open the Arduino IDE.
 
-2) Open the doorlock.ino skecth, compile it, select the correst serial port and finally upload it to the Arduino board.
+2) Open the doorlock.ino sketch, compile it, select the correct serial port and finally upload it to the Arduino board.
 
 3) Check the video [here](https://www.youtube.com/watch?v=r1HL9QZI-as), and Enjoy! :)
 
