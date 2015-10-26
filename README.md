@@ -71,7 +71,7 @@ The image below shows the wiring needed to connect the lock to the Arduino board
 
 4) Complete the folowing fields "Profile Photo URL", "Channel Photo URL" and "Tile Photo URL" with some product images URLs. This images will appear on the Muzzley app then the user will add a new device, and on the respectve devices list.
 
-5) The "Interface UUID" refers to the Muzzley interface that will be presented to the end user. You can update this field later, after reading our Interface documentation [here](http://clients.muzzley.com/documentation#interfaces), and implemeting you own interface. For now, please continue with the following steps to create your Muzzley App.
+5) The "Interface UUID" refers to the Muzzley interface that will be presented to the end user. You can update this field later, after reading our Interface documentation [here](http://clients.muzzley.com/documentation#interfaces), and implementing you own interface. For now, the html, css and javascript code used for this example is provided in the widget folder, and can be used to create your first Muzzley widget.
 
 6) Select the "Device discovery" as "UPNP". This is the method used by the Arduino Ciao Muzzley connector to authenticate the device in your local network. 
 
@@ -100,5 +100,14 @@ The image below shows the wiring needed to connect the lock to the Arduino board
                       It may be changed as as you will at any time, and it will be presented to the user on the Muzzley App as the primary device name.
 
 * **components** -  One array with the Arduino componets acordingly with what as specicfied on our website. Id must contain the id, label and type for each one of them.
+
+
+##Upload the Arduino Sketch
+
+1) Connect the Arduino USB port to the computer, if not already connected, and open the Arduino IDE.
+
+2) Open the doorlock.ino skecth, compile it, select the correst serial port and finally upload it to the Arduino board.
+
+3) Check the video [here](https://www.youtube.com/watch?v=r1HL9QZI-as), and Enjoy! :)
 
 
