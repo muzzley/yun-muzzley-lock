@@ -1,0 +1,119 @@
+html{
+  font-size: 18px; 
+  -ms-touch-action: none;
+  overflow: hidden !important;
+  -ms-user-select: none;
+}
+
+body {
+  height: 100%; width: 100%; margin: 0; padding: 0;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  line-height: 1.4;
+  font-size: 50px; 
+  -ms-touch-action: none;
+  overflow: hidden !important;
+}
+
+@media (max-width: 1400px) {
+  html { font-size: 40px; }
+}
+@media (max-width: 1200px) {
+  html { font-size: 36px; }
+}
+@media (max-width: 1100px) {
+  html { font-size: 32px; }
+}
+@media (max-width: 1000px) {
+  html { font-size: 26px; }
+}
+@media (max-width: 900px) {
+  html { font-size: 20px; }
+}
+@media (max-width: 800px) {
+  html { font-size: 18px; }
+}
+@media (max-width: 700px) {
+  html { font-size: 17px; }
+}
+@media (max-width: 600px) {
+  html { font-size: 16px; }
+}
+@media (max-width: 500px) {
+  html { font-size: 14px; }
+}
+@media (max-width: 400px) {
+  html { font-size: 12px; }
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-hightlight-color: transparent;
+}
+
+
+.container{
+  width: 100%; 
+  height: 100%;
+  background-color: white;
+  display: inline-block;
+}
+
+.container-button{
+  width: 19rem;
+  height: 19rem;
+  margin: 0 auto;
+  border-radius: 100%;
+  background-color: #efefef;
+  padding-top: .5rem;
+}
+
+#open-button {
+  width: 16rem;
+  height: 16rem;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, .7);
+  border-radius: 100%;
+  display:table;
+  margin: 1rem auto 0 auto;
+  background-color: #26bbda;
+  font-family: 'Roboto', sans-serif;
+   -webkit-box-shadow: 0 0 .1rem .1rem rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 0 .1rem .1rem rgba(0,0,0,0.5);
+  box-shadow: 0 0 .1rem .1rem rgba(0,0,0,0.5);
+}
+
+#open-button span{
+ display: table-cell;
+ vertical-align:middle;
+ margin: 0 auto;
+ width: 100%;
+ text-align: center;
+}
+
+
+#open-button.down{
+  background-color: #27ae60;
+  -moz-transition: all .5s ease-out;
+  -webkit-transition: all .5s ease-in;
+  -o-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+#open-button.up{
+  background-color: #26bbda;
+  -moz-transition: all .5s ease-out;
+  -webkit-transition: all .5s ease-in;
+  -o-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+
