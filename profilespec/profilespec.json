@@ -1,0 +1,70 @@
+{
+  "components": [
+    {
+      "id": "lock",
+      "label": "Lock",
+      "classes": "[\"com.muzzley.components.lock\"]"
+    }
+  ],
+  "properties": [
+    {
+      "id": "locked",
+      "label": "Lock Status",
+      "classes": "[\"com.muzzley.properties.status\"]",
+      "mainInformationPriority": 0,
+      "informationPresentation": {
+        "type": "",
+        "options": ""
+      },
+      "mainActionPriority": 0,
+      "actionPresentation": {
+        "type": "tri-state",
+        "options": "{\"outputPath\":\"data.value\",\"icon\":\"on_off\",\"mappings\":{\"on\":true,\"off\":false}}"
+      },
+      "schema": "https://ontology.muzzley.com/schemas/v1/status-onoff",
+      "schemaExtension": "{}",
+      "isTriggerable": true,
+      "isActionable": true,
+      "controlInterfaces": [
+        {
+          "id": "ci",
+          "controlInterface": "toggle-picker",
+          "config": "{\"labelTrue\":\"locked\",\"labelFalse\":\"unlocked\"}"
+        }
+      ],
+      "triggers": [
+        {
+          "id": "0e59ac9b-012e-497c-8bbc-f6df1083b41f",
+          "condition": "equals",
+          "predicateLabel": "is",
+          "inputsLabel": "{{value}}",
+          "inputs": [
+            {
+              "id": "value",
+              "controlInterfaceId": "ci",
+              "path": "[{\"source\":\"selection.value\",\"target\":\"data.value\"}]"
+            }
+          ],
+          "label": ""
+        }
+      ],
+      "actions": [
+        {
+          "id": "eb2b2310-6ca1-4081-acb2-88c8351385be",
+          "label": "Set Status to",
+          "inputsLabel": "{{value}}",
+          "inputs": [
+            {
+              "controlInterfaceId": "ci",
+              "path": "[{\"source\":\"selection.value\",\"target\":\"data.value\"}]"
+            }
+          ]
+        }
+      ],
+      "io": "rws",
+      "onChange": false,
+      "rateLimit": 0,
+      "components": "[\"lock\"]"
+    }
+  ]
+}
