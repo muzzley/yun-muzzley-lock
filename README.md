@@ -42,66 +42,13 @@ The image below shows the wiring needed to connect the lock to the Arduino board
 ![YUN_Lock_Proj](./images/YUN-Lock-Proj.png)
 
 
-# How do I get set up?
+##Install the Muzzley Connector and Create your Muzzley Arduino Lock App
 
-##Dependencies
+1) Download the project from the following [url](https://github.com/muzzley/arduino-ciao-muzzley-connector)
 
-* [Linino OS](http://www.linino.org) running on a Arduino / Linino compatible board. More info about the Linino OS installation on a Arduino YÚN board can be found [here](http://labs.arduino.org/How+to+upgrade+the+Linino+distribution+for+Arduino+Yun)
-* Install Arduino Ciao Core following the instructions [here](http://labs.arduino.org/Ciao+setup)
-* Install the Arduino [Ciao Library](https://github.com/arduino-org/CiaoMCU) on the [Arduino IDE](https://www.arduino.cc/en/Main/Software) / [Arduino Studio](http://labs.arduino.org/tiki-index.php?page=Arduino+Studio)
-* Install the following python module dependencies on the Linino OS:
- * distribute
- * python-openssl
- * paho-mqtt
- * urllib3
- * requests
+2) Login on our [developers website](https://www.muzzley.com/developers) (or create a new account) and open the Apps page.
 
-##Install the Muzzley connector
-
-1) Download the project from the following [url](https://github.com/muzzley/arduino-ciao-muzzley-connector) and follow the included set up instructions.
-
-
-##Create your Muzzley App
-
-1) Login on our [developers website](https://www.muzzley.com/developers) (or create a new account) and open the Apps page.
-
-2) Now click on Create App and give your Muzzley App a name and a description like "Arduino Yun" and "Arduino YÚN Muzzley example".
-
-3) Select the Integration Type as "Cloud to Device" and add a name to the Provider field like "Arduino". It reffers to the manufacturers name that is integrating their products with us.
-
-4) Complete the folowing fields "Profile Photo URL", "Channel Photo URL" and "Tile Photo URL" with some product images URLs. This images will appear on the Muzzley app then the user will add a new device, and on the respectve devices list.
-
-5) The "Interface UUID" refers to the Muzzley interface that will be presented to the end user. You can update this field later, after reading our Interface documentation [here](http://clients.muzzley.com/documentation#interfaces), and implementing you own interface. For now, the html, css and javascript code used for this example is provided in the widget folder, and can be used to create your first Muzzley widget.
-
-6) Select the "Device discovery" as "UPNP". This is the method used by the Arduino Ciao Muzzley connector to authenticate the device in your local network. 
-
-7) Finally add some e-mail addresses to the "Email Access List", including yours. This is the list of authortized users to add your Arduino devices using your Arduino Muzzley App.
-
-8) Click on "save changes" to store your configuration.
-
-9) Now you will have to create a "profile spec" to specify some characterictics of your product. Please read our documentation on the following [link](http://clients.muzzley.com/documentation#selfcare).
-
-
-##Update your connector configuration file
-
-
-1) Update the Muzzley connector configuration file muzzley.json.conf in the **/etc/muzzley/** folder with the details about your own Muzzley App.
-
-* **app_uuid** - Muzzley App unique identifier.
-
-* **app_token** - Muzzley App authentincation token.
-
-* **profile_id** - Muzzley profile specification unique identifier.
-
-* **serial_number** - It can be any uuid string referring one instace of your device.
-                      For exampe if your have 2 boards running your Muzzley App, they must be identified with different uuid's.
-
-* **friendly_name** - It will be the custom name of your device.
-                      It may be changed as as you will at any time, and it will be presented to the user on the Muzzley App as the primary device name.
-
-* **components** -  One array with the Arduino components acordingly with what as specified on our website. It must contain the id, label and type for each one of them.
-                    The id represents one instance of a component present on the device (it can be any string, and will be used as the identifier for every one of them), the label, represents its description (will be the identifier text presented to the user on their smartphone), and the type, its Muzzley profile specification.
-
+3) Follow the included set up instructions from the [arduino-ciao-muzzley-connector](https://github.com/muzzley/arduino-ciao-muzzley-connector) repository and use widget code and the profile spec configuration file provided on this example, right next to the doorlock.ino file.
 
 
 ##Upload the Arduino Sketch
