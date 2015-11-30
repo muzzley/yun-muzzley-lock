@@ -99,7 +99,9 @@ The image below shows the wiring needed to connect the lock to the Arduino board
 * **friendly_name** - It will be the custom name of your device.
                       It may be changed as as you will at any time, and it will be presented to the user on the Muzzley App as the primary device name.
 
-* **components** -  One array with the Arduino componets acordingly with what as specicfied on our website. It must contain the id, label and type for each one of them.
+* **components** -  One array with the Arduino components acordingly with what as specified on our website. It must contain the id, label and type for each one of them.
+                    The id represents one instance of a component present on the device (it can be any string, ans will be used as the identifier for every one of them), the label, represents its description (will be the string presented to the user on their smartphone), and the type, its Muzzley profile specification.
+
 
 
 ##Upload the Arduino Sketch
