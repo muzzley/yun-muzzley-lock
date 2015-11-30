@@ -100,7 +100,7 @@ The image below shows the wiring needed to connect the lock to the Arduino board
                       It may be changed as as you will at any time, and it will be presented to the user on the Muzzley App as the primary device name.
 
 * **components** -  One array with the Arduino components acordingly with what as specified on our website. It must contain the id, label and type for each one of them.
-                    The id represents one instance of a component present on the device (it can be any string, ans will be used as the identifier for every one of them), the label, represents its description (will be the string presented to the user on their smartphone), and the type, its Muzzley profile specification.
+                    The id represents one instance of a component present on the device (it can be any string, and will be used as the identifier for every one of them), the label, represents its description (will be the identifier text presented to the user on their smartphone), and the type, its Muzzley profile specification.
 
 
 
