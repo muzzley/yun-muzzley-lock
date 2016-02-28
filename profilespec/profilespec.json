@@ -34,7 +34,7 @@
       ],
       "triggers": [
         {
-          "id": "0e59ac9b-012e-497c-8bbc-f6df1083b41f",
+          "id": "",
           "condition": "equals",
           "predicateLabel": "is",
           "inputsLabel": "{{value}}",
@@ -50,7 +50,7 @@
       ],
       "actions": [
         {
-          "id": "eb2b2310-6ca1-4081-acb2-88c8351385be",
+          "id": "",
           "label": "Set Status to",
           "inputsLabel": "{{value}}",
           "inputs": [
@@ -65,6 +65,28 @@
       "onChange": false,
       "rateLimit": 0,
       "components": "[\"lock\"]"
+    }
+  ],
+  "tiles": [
+    {
+      "label": "Lock",
+      "photoUrl": "http://cdn.muzzley.com/things/profiles/myintegrations/Channel_MyIntegration_Lock.png",
+      "photoUrlAlt": "http://cdn.muzzley.com/things/profiles/myintegrations/Channel_MyIntegration_Lock.png",
+      "isGroupable": true,
+      "useInterface": true,
+      "components": [
+        "lock"
+      ],
+      "inclusive": false,
+      "information": [],
+      "actions": [
+        {
+          "property": "status",
+          "componentType": "lock",
+          "type": "tri-state",
+          "options": "{\"outputPath\":\"data.value\",\"icon\":\"on_off\",\"mappings\":{\"on\":true,\"off\":false}}"
+        }
+      ]
     }
   ]
 }
