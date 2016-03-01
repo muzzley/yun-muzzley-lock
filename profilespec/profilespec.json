@@ -8,7 +8,7 @@
   ],
   "properties": [
     {
-      "id": "locked",
+      "id": "status",
       "label": "Lock Status",
       "classes": "[\"com.muzzley.properties.status\"]",
       "mainInformationPriority": 0,
