@@ -8,7 +8,7 @@ int timer = 0;
 int max_time = 3000;
 
 String lock_component = String("yunlock1");
-String lock_property = String("unlock");
+String lock_property = String("status");
 
 void setup() {
   pinMode(relay_pin, OUTPUT);
