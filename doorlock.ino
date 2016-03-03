@@ -12,7 +12,7 @@ String lock_property = String("status");
 
 void setup() {
   pinMode(relay_pin, OUTPUT);
-  Ciao.begin(115000);
+  Ciao.begin(250000);
   #ifdef DEBUG
     Serial.begin(57600);
     while(!Serial){}
