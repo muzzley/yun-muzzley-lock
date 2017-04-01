@@ -42,7 +42,7 @@ The image below shows the wiring needed to connect the lock to the Arduino board
 ![YUN_Lock_Proj](./images/YUN-Lock-Proj.png)
 
 
-##Install the Muzzley Connector and Create your Muzzley Arduino Lock App
+## Install the Muzzley Connector and Create your Muzzley Arduino Lock App
 
 1) Download the project from the following [url](https://github.com/muzzley/arduino-ciao-muzzley-connector)
 
@@ -51,7 +51,7 @@ The image below shows the wiring needed to connect the lock to the Arduino board
 3) Follow the included set up instructions from the [arduino-ciao-muzzley-connector](https://github.com/muzzley/arduino-ciao-muzzley-connector) repository and use widget code and the profile spec configuration file provided on this example, right next to the doorlock.ino file.
 
 
-##Upload the Arduino Sketch
+## Upload the Arduino Sketch
 
 1) Connect the Arduino USB port to the computer, if not already connected, and open the Arduino IDE.
 
